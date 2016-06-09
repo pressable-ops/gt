@@ -43,7 +43,6 @@ func Sign(psk, uri string, post []string) ([]byte, error) {
 	} else {
 		signString = url.QueryEscape(uri)
 	}
-	log.Println("signing:", signString)
 	if _, err := hasher.Write([]byte(signString)); err != nil {
 		return nil, ErrWritingHasher
 	}
