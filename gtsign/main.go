@@ -20,7 +20,7 @@ func init() {
 	flag.StringVar(&uri, "uri", uri, "The URI you want to sign")
 	flag.StringVar(&psk, "psk", psk, "The GT preshared key [env: GT_PSK]")
 	flag.Usage = func() {
-		fmt.Fprintf(os.Stderr, "testUsage of %s:\n", os.Args[0])
+		fmt.Fprintf(os.Stderr, "Usage of %s:\n", os.Args[0])
 		flag.PrintDefaults()
 		fmt.Fprintf(os.Stderr, "  [postkey=postval [postkey2=postval2 [...]]]\n")
 	}
